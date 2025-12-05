@@ -7,8 +7,8 @@ var games = [
   {
     id: 'zaidgpt',
     title: 'ZaidGPT',
-    url: 'https://zaidgpt.vercel.app',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg'
+    url: 'https://zaidgpt.vercel.app/',
+    image: 'https://i.ibb.co/qLPTwBV7/favicon.jpg'
   },
   {
     id: 'funfri',
