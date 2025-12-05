@@ -5,6 +5,14 @@ var apps = [
       'image': 'assets/images/add.png'
     },
     {
+      "id": "zaidgpt",
+      "title": "ZaidGPT",
+      "url": "https://zaidgpt.vercel.app/",
+      'image': 'https://i.ibb.co/99FbWcrh/chatgpt.png',
+      "description": "Note: ZaidGPT is in beta. expect some issues and inaccuracy"
+      
+    },
+    {
       "id": "chatgpt",
       "title": "ChatGPT (Working)",
       "url": "https://demo.chat-sdk.dev/",
