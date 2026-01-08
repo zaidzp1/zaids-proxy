@@ -56,6 +56,52 @@
         <a href="./about.html">About</a>
       </div>
     </div>
+    <script>
+// Show announcements from admin panel
+const announcements = JSON.parse(localStorage.getItem('zaids_announcements') || '[]');
+
+if (announcements.length > 0) {
+    const ann = announcements[0]; // Get first announcement
+    
+    // Choose color based on type
+    let color = '#2c5364'; // normal = dark blue
+    if (ann.type === 'important') color = '#667eea'; // purple
+    if (ann.type === 'urgent') color = '#f5576c'; // red
+    
+    // Create the banner
+    const banner = document.createElement('div');
+    banner.innerHTML = `
+        <div style="
+            background: ${color};
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+        ">
+            <strong>${ann.title}</strong> - ${ann.message}
+            <button onclick="this.parentElement.parentElement.remove()" 
+                style="
+                    background: white;
+                    color: ${color};
+                    border: none;
+                    padding: 5px 15px;
+                    margin-left: 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                ">
+                Close
+            </button>
+        </div>
+    `;
+    
+    document.body.insertBefore(banner, document.body.firstChild);
+    document.body.style.paddingTop = '50px'; // Push content down
+}
+</script>
   </body>
 
   <script src="./js/index.js"></script>
